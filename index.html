@@ -64,6 +64,7 @@
             font-size: 24px;
             font-weight: bold;
             margin-right: auto;
+            cursor: pointer; /* Added cursor pointer for logo */
         }
         .nav-links {
             display: flex;
@@ -304,7 +305,7 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo">Prajwal Gotmare</div>
+                <div class="logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">Prajwal Gotmare</div> <!-- Added scroll to top functionality -->
                 <ul class="nav-links">
                     <li><a href="#about-heading">About</a></li> <!-- Updated link -->
                     <li><a href="#experience">Experience</a></li>
@@ -312,6 +313,7 @@
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#education">Education</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="https://drive.google.com/file/d/1PlEGGT4xu3CPn9BLZeeZQtWIVjYDoDks/view?usp=drive_link" target="_blank">Resume</a></li> <!-- Added link to download resume -->
                 </ul>
                 <div class="header-social-links">
                     <a href="https://linkedin.com/in/prajwalgotmare" target="_blank" aria-label="LinkedIn">
