@@ -13,7 +13,7 @@
             --light: #f9fafb;
             --gray: #6b7280;
             --light-gray: #e5e7eb;
-            --text-on-dark: #f0f0f0; /* Light text color for dark backgrounds */
+            --text-on-dark: #f0f0f0;
         }
 
         * {
@@ -64,7 +64,7 @@
             font-size: 24px;
             font-weight: bold;
             margin-right: auto;
-            cursor: pointer; /* Added cursor pointer for logo */
+            cursor: pointer;
         }
         .nav-links {
             display: flex;
@@ -81,24 +81,22 @@
         .nav-links a:hover::after { width: 100%; }
         .nav-links a:hover { color: var(--primary); }
 
-        .header-social-links { display: flex; align-items: center; margin-left: 30px; gap: 25px; } /* Added gap for equal distance */
+        .header-social-links { display: flex; align-items: center; margin-left: 30px; gap: 25px; }
         .header-social-links a { color: white; display: inline-block; transition: transform 0.2s ease; }
         .header-social-links a:hover { transform: scale(1.1); }
         .header-social-links svg { width: 24px; height: 24px; fill: currentColor; }
 
         #burger-menu { display: none; background: none; border: none; color: white; font-size: 28px; cursor: pointer; padding: 5px; margin-left: 15px; }
 
-        /* --- NEW: Combined Hero/About Wrapper --- */
         .hero-about-wrapper {
-            padding-top: 100px; /* Adjust top padding generously for header */
-            padding-bottom: 80px; /* Bottom padding before next section */
-            color: var(--text-on-dark); /* Default text color for this section */
+            padding-top: 100px;
+            padding-bottom: 80px;
+            color: var(--text-on-dark);
             position: relative;
             overflow: hidden;
-            background-color: #070b19; /* Base dark background */
+            background-color: #070b19;
         }
 
-        /* --- Nebula Background Styling (Now inside wrapper) --- */
         .nebula-container {
             position: absolute;
             top: 0;
@@ -108,7 +106,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            z-index: 1; /* Behind content */
+            z-index: 1;
             perspective: 1000px;
         }
         .nebula-container svg { width: 100%; height: 100%; }
@@ -119,37 +117,36 @@
             height: 100%;
         }
 
-        /* --- Styling for About content now on dark background --- */
         .hero-about-wrapper .about-content-container {
-            position: relative; /* Needed for z-index */
-            z-index: 2; /* Above nebula */
-            padding-top: 60px; /* Space below header */
-             padding-bottom: 40px; /* Space above footer/next section */
+            position: relative;
+            z-index: 2;
+            padding-top: 60px;
+            padding-bottom: 40px;
         }
 
-        .hero-about-wrapper h2#about-heading { /* Target specific h2 */
-            font-size: 38px; /* Slightly larger */
-            margin-bottom: 60px; /* More space below title */
+        .hero-about-wrapper h2#about-heading {
+            font-size: 38px;
+            margin-bottom: 60px;
             text-align: center;
             position: relative;
-            color: white; /* White title */
+            color: white;
             text-shadow: 0 1px 3px rgba(0,0,0,0.6);
         }
         .hero-about-wrapper h2#about-heading::after {
             content: '';
             position: absolute;
-            width: 90px; /* Wider underline */
+            width: 90px;
             height: 4px;
-            background-color: var(--primary); /* Use primary color */
-            bottom: -20px; /* Position underline */
+            background-color: var(--primary);
+            bottom: -20px;
             left: 50%;
             transform: translateX(-50%);
         }
 
-        .about-content { /* Reusing class name, but styles adjusted */
+        .about-content {
             display: flex;
             align-items: center;
-            gap: 60px; /* Increased gap */
+            gap: 60px;
         }
         .about-img {
             flex: 1;
@@ -162,32 +159,30 @@
             height: 350px;
             object-fit: cover;
             display: inline-block;
-            box-shadow: 0 0 30px rgba(0, 150, 255, 0.3); /* Nebula-like glow */
-            border: 4px solid rgba(255, 255, 255, 0.8); /* Lighter border */
+            box-shadow: 0 0 30px rgba(0, 150, 255, 0.3);
+            border: 4px solid rgba(255, 255, 255, 0.8);
         }
         .about-text {
             flex: 1.5;
         }
         .about-text p {
             margin-bottom: 20px;
-            color: var(--text-on-dark); /* Light text */
-            font-size: 1.1em; /* Make text slightly larger */
-             text-shadow: 0 1px 2px rgba(0,0,0,0.5); /* Subtle shadow */
+            color: var(--text-on-dark);
+            font-size: 1.1em;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
         }
-         /* No need for :first-of-type special styling anymore */
 
-        /* --- General Section Styling (Starts AFTER hero/about wrapper) --- */
         section:not(.hero-about-wrapper) {
             padding: 80px 0;
         }
-        section h2:not(#about-heading) { /* Style other H2s */
+        section h2:not(#about-heading) {
             font-size: 36px;
             margin-bottom: 50px;
             text-align: center;
             position: relative;
             color: var(--dark);
         }
-         section h2:not(#about-heading)::after { /* Style other underlines */
+         section h2:not(#about-heading)::after {
             content: '';
             position: absolute;
             width: 80px;
@@ -198,17 +193,13 @@
             transform: translateX(-50%);
         }
 
-        /* Re-apply Alternate Section Backgrounds */
         #experience, #projects, #contact {
              background-color: #f3f4f6;
         }
-        /* Ensure #skills (if not first) has default light background */
         #skills {
              background-color: var(--light);
         }
 
-
-        /* --- Experience & Education Items --- */
         .experience-item, .education-item { background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); margin-bottom: 30px; border-left: 5px solid var(--primary); }
         .experience-header, .education-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px; flex-wrap: wrap; gap: 10px; }
         .experience-header > div:first-child, .education-header > div:first-child { flex-grow: 1; }
@@ -218,7 +209,6 @@
         .experience-item ul { list-style-type: disc; list-style-position: outside; padding-left: 25px; color: var(--gray); }
         .experience-item ul li { margin-bottom: 8px; }
 
-        /* --- Skills Section --- */
         .skills-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
         .skill-category { background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); }
         .skill-category h3 { font-size: 20px; margin-bottom: 20px; color: var(--primary); border-bottom: 2px solid var(--light-gray); padding-bottom: 10px; }
@@ -226,7 +216,6 @@
         .skill-tag { background-color: var(--light-gray); color: var(--dark); padding: 8px 15px; border-radius: 20px; font-size: 14px; border: 1px solid transparent; transition: background-color 0.3s, color 0.3s, transform 0.2s; cursor: default; }
         .skill-tag:hover { background-color: var(--primary); color: white; transform: scale(1.05); }
 
-        /* --- Projects Section --- */
         .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; }
         .project-card { background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease; }
          .project-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12); }
@@ -238,7 +227,6 @@
         .project-info p { color: var(--gray); margin-bottom: 20px; flex-grow: 1; font-size: 0.95em; }
         .project-info .skills-list { margin-top: auto; }
 
-        /* --- Contact Section --- */
         .contact-info { margin-top: 40px; text-align: center; }
         .contact-info p { margin-bottom: 10px; font-size: 16px; color: var(--gray); }
         .contact-info p strong { color: var(--dark); margin-right: 5px; }
@@ -249,10 +237,8 @@
         .social-link svg { width: 22px; height: 22px; fill: currentColor; }
         .social-link:hover { background-color: var(--primary); color: white; transform: translateY(-2px); }
 
-        /* --- Footer --- */
         footer { background-color: var(--dark); color: #d1d5db; text-align: center; padding: 30px 0; margin-top: 80px; }
 
-        /* --- Responsive Adjustments --- */
         @media screen and (max-width: 992px) {
             .logo { margin-right: 20px; }
              .nav-links { display: none; }
@@ -265,7 +251,6 @@
              .nav-links.active a::after { display: none; }
 
             .projects-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-            /* Adjust About section on medium screens */
             .about-content { gap: 30px; flex-direction: column; text-align: center; }
              .about-img { margin-bottom: 40px; max-width: 300px; height: 300px; }
              .hero-about-wrapper h2#about-heading { margin-bottom: 40px; }
@@ -273,7 +258,7 @@
 
         @media screen and (max-width: 768px) {
             header { padding: 10px 0; }
-             .hero-about-wrapper { padding-top: 80px; padding-bottom: 60px; } /* Adjust padding */
+             .hero-about-wrapper { padding-top: 80px; padding-bottom: 60px; }
 
             .experience-header, .education-header { justify-content: center; text-align: center; }
             .experience-header > div:first-child, .education-header > div:first-child { margin-bottom: 5px; }
@@ -283,7 +268,7 @@
              .project-card { max-width: 400px; margin: 0 auto; }
 
             .contact-info { margin-top: 40px; }
-            section h2:not(#about-heading) { font-size: 32px; } /* Smaller headings */
+            section h2:not(#about-heading) { font-size: 32px; }
             .hero-about-wrapper h2#about-heading { font-size: 34px; }
         }
 
@@ -299,21 +284,248 @@
              .about-img { max-width: 250px; height: 250px; }
          }
 
+        /* --- Chatbot Styling --- */
+        #chatbot-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1001;
+        }
+
+        /* NEW: Wrapper for hover effects and positioning icon */
+        #chatbot-icon-wrapper {
+            width: 70px;
+            height: 70px;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+            z-index: 1002; /* Ensures this interactive area is above the window */
+            /* display: flex; align-items: center; justify-content: center; /* Optional: if icon needs specific alignment */
+        }
+
+        #chatbot-icon-wrapper:hover {
+            transform: scale(1.1);
+        }
+        /* For icon background change on wrapper hover */
+        #chatbot-icon-wrapper:hover #chatbot-icon {
+            background-color: var(--primary-dark);
+        }
+
+
+        /* UPDATED: #chatbot-icon styles */
+        #chatbot-icon {
+            background-color: transparent;
+            width: 100%; /* Fills the wrapper */
+            height: 100%; /* Fills the wrapper */
+            border-radius: 50%;
+            display: flex; /* Managed by JS for initial state */
+            justify-content: center;
+            align-items: center;
+            /* cursor: pointer; /* Moved to wrapper or can be on both, wrapper is primary */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /* transform transition removed as it's on wrapper for scale, and animation handles translate */
+            transition: background-color 0.2s ease; /* Only for background color change */
+            overflow: hidden;
+            /* z-index: 1002; /* Moved to wrapper */
+            animation: chatbotIconBobbing 2.8s ease-in-out infinite; /* ADDED ANIMATION */
+        }
+
+        /* #chatbot-icon:hover { -- This style block is no longer needed for transform and bg, handled by wrapper
+            transform: scale(1.1); -- MOVED to wrapper
+            background-color: var(--primary-dark); -- MOVED to wrapper:hover #chatbot-icon
+        } */
+
+
+        /* NEW: Keyframes for bobbing animation */
+        @keyframes chatbotIconBobbing {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-6px); /* Adjust vertical movement distance */
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+
+        #chatbot-icon img {
+            width: 75%;
+            height: 75%;
+            object-fit: contain;
+        }
+
+
+        #chatbot-window {
+            width: 350px;
+            height: 550px;
+            max-height: 75vh;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            display: flex; /* Managed by JS for initial state */
+            flex-direction: column;
+            overflow: hidden;
+            position: absolute;
+            bottom: 80px; /* Position above icon */
+            right: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            z-index: 1001; /* Window z-index */
+        }
+
+        #chatbot-window.hidden {
+            opacity: 0;
+            transform: translateY(20px) scale(0.95);
+            pointer-events: none;
+        }
+
+        #chatbot-header {
+            background-color: var(--dark);
+            color: white;
+            padding: 12px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        #chatbot-header button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 22px;
+            cursor: pointer;
+            padding: 0 5px;
+        }
+
+        #chatbot-messages {
+            flex-grow: 1;
+            padding: 15px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            background-color: var(--light-gray);
+        }
+
+        .chat-message {
+            padding: 10px 14px;
+            border-radius: 18px;
+            max-width: 85%;
+            word-wrap: break-word;
+            line-height: 1.45;
+            font-size: 0.95em;
+        }
+
+        .chat-message.user {
+            background-color: var(--primary);
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 6px;
+        }
+
+        .chat-message.bot {
+            background-color: #e9e9eb;
+            color: var(--dark);
+            align-self: flex-start;
+            border-bottom-left-radius: 6px;
+        }
+        .chat-message.bot a.chat-link {
+            color: var(--primary-dark);
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        .chat-message.bot a.chat-link:hover {
+            color: var(--secondary);
+        }
+
+        #chatbot-input-area {
+            display: flex;
+            padding: 10px 12px;
+            border-top: 1px solid var(--light-gray);
+            background-color: white;
+            align-items: center;
+        }
+
+        #chatbot-input {
+            flex-grow: 1;
+            border: 1px solid var(--light-gray);
+            border-radius: 20px;
+            padding: 10px 15px;
+            margin-right: 8px;
+            font-size: 14px;
+            height: 40px;
+        }
+        #chatbot-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+        }
+
+        #chatbot-send {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        #chatbot-send svg {
+            width: 20px;
+            height: 20px;
+        }
+        #chatbot-send:hover {
+            background-color: var(--primary-dark);
+        }
+
+        @media screen and (max-width: 480px) {
+            #chatbot-window {
+                width: calc(100vw - 30px);
+                max-height: 70vh;
+                bottom: 70px;
+                right: -5px;
+            }
+            /* UPDATED: Wrapper size for mobile */
+            #chatbot-icon-wrapper {
+                width: 50px;
+                height: 50px;
+                /* Note: #chatbot-container handles fixed positioning (bottom: 30px, right: 30px)
+                   The individual icon styles for bottom/right in media query were likely not needed
+                   or would conflict if #chatbot-icon was not position:absolute itself.
+                   The wrapper takes the size, the container positions the whole assembly. */
+            }
+            /* #chatbot-icon is width/height 100% of wrapper, so it adapts. */
+            /* The original media query for #chatbot-icon's width/height can be removed if desired,
+               as its size is now relative to #chatbot-icon-wrapper. */
+
+            #chatbot-icon img {
+                 width: 60%;
+                 height: 60%;
+            }
+        }
+
     </style>
 </head>
 <body>
     <header>
         <div class="container">
             <nav>
-                <div class="logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">Prajwal Gotmare</div> <!-- Added scroll to top functionality -->
+                <div class="logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">Prajwal Gotmare</div>
                 <ul class="nav-links">
-                    <li><a href="#about-heading">About</a></li> <!-- Updated link -->
+                    <li><a href="#about-heading">About</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#education">Education</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="https://drive.google.com/file/d/1KjlcGNL-EDMPTWXIxDGkJhfdT5SMzwf1/view?usp=sharing" target="_blank">Resume</a></li> <!-- Added link to download resume -->
+                    <li><a href="https://drive.google.com/file/d/1KjlcGNL-EDMPTWXIxDGkJhfdT5SMzwf1/view?usp=sharing" target="_blank">Resume</a></li>
                 </ul>
                 <div class="header-social-links">
                     <a href="https://linkedin.com/in/prajwalgotmare" target="_blank" aria-label="LinkedIn">
@@ -328,16 +540,12 @@
         </div>
     </header>
 
-    <!-- Combined Hero/About Section with Nebula Background -->
     <div class="hero-about-wrapper">
-        <!-- Nebula Background -->
         <div class="nebula-container">
             <div id="nebula-wrapper">
                 <svg id="nebula" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid meet"></svg>
             </div>
         </div>
-
-        <!-- About Me Content -->
         <div class="container about-content-container">
              <h2 id="about-heading">About Me</h2>
              <div class="about-content">
@@ -351,10 +559,8 @@
                  </div>
              </div>
         </div>
-    </div> <!-- End hero-about-wrapper -->
+    </div>
 
-
-    <!-- Subsequent Sections -->
     <section id="experience">
         <div class="container">
             <h2>Work Experience</h2>
@@ -412,7 +618,7 @@
     <section id="projects">
         <div class="container">
             <h2>Projects</h2>
-            <div class="projects-grid"> 
+            <div class="projects-grid">
                  <div class="project-card"><div class="project-img"><img src="images/Demand-Planning-sm.webp" alt="Demand Forecasting Platform"></div><div class="project-info"><h3>Demand Forecasting Platform</h3><p>End-to-End solution for US E-commerce stores using time series algorithms & OpenAI chatbot.</p><div class="skills-list"><span class="skill-tag">AWS</span> <span class="skill-tag">OpenAI</span> <span class="skill-tag">Time Series</span></div></div></div>
                  <div class="project-card"><div class="project-img"><img src="images/sanskrit.webp" alt="Sanskrit Teaching Platform"></div><div class="project-info"><h3>Sanskrit Teaching Platform</h3><p>Sanskrit teaching bot supporting 15+ languages, making learning accessible globally.</p><div class="skills-list"><span class="skill-tag">OpenAI API</span> <span class="skill-tag">NLP</span> <span class="skill-tag">Multilingual</span></div></div></div>
                  <div class="project-card"><div class="project-img"><img src="images/caller.jpg" alt="Caller Support Bot"></div><div class="project-info"><h3>Caller Support Bot</h3><p>Advanced customer support caller bot for appointment booking across various services.</p><div class="skills-list"><span class="skill-tag">Python</span> <span class="skill-tag">MySQL</span> <span class="skill-tag">Langchain</span> <span class="skill-tag">GTTS</span></div></div></div>
@@ -460,19 +666,43 @@
         </div>
     </footer>
 
-    <!-- Nebula JavaScript -->
+    <!-- Chatbot Container -->
+    <div id="chatbot-container">
+        <!-- NEW: Wrapper for hover effects and to allow icon to animate independently -->
+        <div id="chatbot-icon-wrapper">
+            <div id="chatbot-icon" aria-label="Open Chatbot" role="button" tabindex="0">
+                <img src="images/robot.png" alt="Chatbot Assistant Icon">
+            </div>
+        </div>
+        <div id="chatbot-window" class="hidden">
+            <div id="chatbot-header">
+                <span>Prajwal's Assistant</span>
+                <button id="close-chatbot" aria-label="Close Chatbot">×</button>
+            </div>
+            <div id="chatbot-messages">
+            </div>
+            <div id="chatbot-input-area">
+                <input type="text" id="chatbot-input" placeholder="Ask about Prajwal...">
+                <button id="chatbot-send" aria-label="Send message">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20px" height="20px" fill="currentColor">
+                        <path d="M0 0h24v24H0V0z" fill="none"/><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2 .01 7z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nebula JavaScript (original) -->
     <script>
         const svg = document.getElementById('nebula');
-        // Target container inside the specific wrapper
         const nebulaContainer = document.querySelector('.hero-about-wrapper .nebula-container');
         const numStars = 1500;
         const nebulaGroup = document.createElementNS("http://www.w3.org/2000/svg", "g");
-        let defaultRotation = 0; // Constant background rotation ONLY
+        let defaultRotation = 0;
         let currentScale = 1;
         let initialDistance = null, initialPinchScale = 1;
         const zOffsetRange = 125, maxDistance = 600;
 
-        // --- Star Creation ---
         if (svg) {
             for (let layer = 0; layer < 5; layer++) {
                 const layerGroup = document.createElementNS("http://www.w3.org/2000/svg", "g");
@@ -511,63 +741,32 @@
             }
             svg.appendChild(nebulaGroup);
         }
-
-        // Function to update SVG transforms
         function updateTransform() {
             if (!nebulaGroup) return;
             nebulaGroup.setAttribute('transform', `translate(500,500) scale(${currentScale}) translate(-500,-500)`);
-            const totalRotation = defaultRotation; // Only use default rotation
+            const totalRotation = defaultRotation;
             Array.from(nebulaGroup.children).forEach(layer => {
                 const zOffset = parseFloat(layer.getAttribute('data-zoffset'));
                 const factor = 1 + Math.abs(zOffset) / (zOffsetRange * 2);
                 layer.setAttribute('transform', `rotate(${totalRotation * factor} 500 500) translate(0, ${zOffset})`);
             });
         }
-
-        // --- Event Listeners (Only Pinch-to-Zoom) ---
         if (nebulaContainer) {
             nebulaContainer.addEventListener('touchstart', (e) => {
-                if (e.touches.length === 2) {
-                    e.preventDefault();
-                    initialDistance = Math.hypot(e.touches[1].clientX - e.touches[0].clientX, e.touches[1].clientY - e.touches[0].clientY);
-                    initialPinchScale = currentScale;
-                }
+                if (e.touches.length === 2) { e.preventDefault(); initialDistance = Math.hypot(e.touches[1].clientX - e.touches[0].clientX, e.touches[1].clientY - e.touches[0].clientY); initialPinchScale = currentScale; }
             }, { passive: false });
-
             nebulaContainer.addEventListener('touchmove', (e) => {
-                if (e.touches.length === 2 && initialDistance !== null) {
-                    e.preventDefault();
-                    const currentDistance = Math.hypot(e.touches[1].clientX - e.touches[0].clientX, e.touches[1].clientY - e.touches[0].clientY);
-                    currentScale = initialPinchScale * (currentDistance / initialDistance);
-                    currentScale = Math.max(0.5, Math.min(currentScale, 3));
-                }
+                if (e.touches.length === 2 && initialDistance !== null) { e.preventDefault(); const currentDistance = Math.hypot(e.touches[1].clientX - e.touches[0].clientX, e.touches[1].clientY - e.touches[0].clientY); currentScale = initialPinchScale * (currentDistance / initialDistance); currentScale = Math.max(0.5, Math.min(currentScale, 3));}
             }, { passive: false });
-
-            nebulaContainer.addEventListener('touchend', (e) => {
-                if (e.touches.length < 2) {
-                     initialDistance = null;
-                }
-            });
+            nebulaContainer.addEventListener('touchend', (e) => { if (e.touches.length < 2) { initialDistance = null; } });
         }
-
-        // Animation Loop
         let animationFrameId = null;
-        function animate() {
-            defaultRotation += 0.1; // Rotation speed
-            updateTransform();
-            animationFrameId = requestAnimationFrame(animate);
-        }
-
-        // Initial setup and start animation
-        if (nebulaContainer) {
-            updateTransform();
-            animate();
-        }
+        function animate() { defaultRotation += 0.08; updateTransform(); animationFrameId = requestAnimationFrame(animate); }
+        if (nebulaContainer) { updateTransform(); animate(); }
     </script>
 
-    <!-- General Page Scripts (Smooth Scroll, Mobile Nav) -->
+    <!-- General Page Scripts (Smooth Scroll, Mobile Nav - original) -->
     <script>
-        // --- Smooth Scrolling ---
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 const href = this.getAttribute('href');
@@ -576,14 +775,13 @@
                     try {
                         const targetElement = document.querySelector(href);
                         if (targetElement) {
-                            const headerOffset = document.querySelector('header')?.offsetHeight || 65; // Match header padding
+                            const headerOffset = document.querySelector('header')?.offsetHeight || 65;
                             const elementPosition = targetElement.getBoundingClientRect().top;
                             const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
                             window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-
-                            const navLinks = document.querySelector('.nav-links');
-                            if (navLinks && navLinks.classList.contains('active')) {
-                                navLinks.classList.remove('active');
+                            const navLinksListGeneral = document.querySelector('.nav-links'); // Use a unique name
+                            if (navLinksListGeneral && navLinksListGeneral.classList.contains('active')) {
+                                navLinksListGeneral.classList.remove('active');
                                 document.getElementById('burger-menu')?.setAttribute('aria-expanded', 'false');
                             }
                         }
@@ -591,18 +789,19 @@
                 }
             });
         });
-
-        // --- Mobile Nav Toggle ---
         const burgerButton = document.getElementById('burger-menu');
-        const navLinks = document.querySelector('.nav-links');
-        if (burgerButton && navLinks) {
+        const navLinksListGeneral = document.querySelector('.nav-links'); // Use the same unique name
+        if (burgerButton && navLinksListGeneral) {
             burgerButton.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-                const isExpanded = navLinks.classList.contains('active');
+                navLinksListGeneral.classList.toggle('active');
+                const isExpanded = navLinksListGeneral.classList.contains('active');
                 burgerButton.setAttribute('aria-expanded', isExpanded);
             });
         }
     </script>
+
+    <!-- Chatbot Script -->
+    <script src="chatbot.js"></script>
 
 </body>
 </html>
